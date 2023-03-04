@@ -5,15 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script async src="scripts.js"></script>
     <title>Weather Dashboard</title>
   </head>
   <body>
     <div class="mainContainer">
       <div class="header">
-        <ul class="headerListOne">
-          <li><img src="" alt="" /></li>
-          <li></li>
+        <ul class="headerList" id="headerListOne">
+          <li>
+            <img
+              src="icons/magnifying-glass.png"
+              alt="search icon"
+              id="searchIcon"
+            />
+          </li>
+          <li>
+            <input
+              type="text"
+              name="searchInput"
+              id="searchInput"
+              placeholder="search location here..."
+            />
+          </li>
+        </ul>
+        <ul class="headerList" id="headerlistTwo">
+          <li><button class="buttons" id="buttonCelsius">°C</button></li>
+          <li><button class="buttons" id="buttonFahrenheit">°F</button></li>
         </ul>
       </div>
       <div class="content"></div>
