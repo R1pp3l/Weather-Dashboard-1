@@ -1,0 +1,11 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #003366;
+}
+
+.header {
+  display: flex;
+  background-color: #87ceeb;
+  color: white;
+}
