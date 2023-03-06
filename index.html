@@ -92,11 +92,41 @@
         <div class="secondContent">
           <div class="currentWeather">
             <img src="" alt="" id="currentIcon" />
+            <div id="currentDescription"></div>
             <div id="currentTemp"></div>
             <div id="currentDateTime"></div>
             <div id="currentLocation"></div>
           </div>
-          <div class="todayMeasures"></div>
+          <div class="todayMeasures">
+            <div class="background">
+              <div id="currentHumidity" class="currentMeasures hidden">
+                <p>Humidity</p>
+                <img src="icons/humidity.svg" alt="" class="measureIcons" />
+                <div id="humidity"></div>
+              </div>
+            </div>
+            <div class="background">
+              <div id="currentPressure" class="currentMeasures hidden">
+                <p>Pressure</p>
+                <img src="icons/pressure.svg" alt="" class="measureIcons" />
+                <div id="pressure"></div>
+              </div>
+            </div>
+            <div class="background">
+              <div id="currentWindSpeed" class="currentMeasures hidden">
+                <p>Wind Speed</p>
+                <img src="icons/windSpeed.svg" alt="" class="measureIcons" />
+                <div id="windSpeed"></div>
+              </div>
+            </div>
+            <div class="background">
+              <div id="currentUVIndex" class="currentMeasures hidden">
+                <p>UV Index</p>
+                <img src="icons/UVindex.svg" alt="" class="measureIcons" />
+                <div id="uvIndex"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
