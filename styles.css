@@ -2,6 +2,11 @@ body {
   background-color: #003366;
 }
 
+body,
+html {
+  height: 100vh;
+}
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -113,10 +118,84 @@ body {
 
 /*                   Second Content                       */
 .secondContent {
-  border: 1px solid red;
+  display: flex;
   height: 56vh;
 }
 
 .currentWeather {
-  border: 1px solid greenyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  border-radius: 15px;
+  width: 40%;
+  height: 54.5vh;
+  font-family: "Open Sans", sans-serif;
+  background-color: #87ceeb;
+  color: white;
+}
+
+.currentWeather img {
+  width: 10em;
+  height: auto;
+}
+
+#currentDescription {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+
+#currentTemp {
+  font-size: 3em;
+  margin-bottom: 0.4em;
+}
+
+#currentDateTime {
+  font-size: 4em;
+  margin-bottom: 0.4em;
+}
+
+#currentLocation {
+  font-size: 2em;
+}
+
+.todayMeasures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ."
+    ". .";
+  margin-left: 1em;
+  width: 60vw;
+}
+
+.background {
+  background-color: #87ceeb;
+  margin: 0.5em;
+  border-radius: 15px;
+}
+
+.currentMeasures {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.currentMeasures p {
+  font-size: 1.4em;
+}
+
+.currentMeasures div {
+  margin-top: 1em;
+  font-size: 1.5rem;
+}
+.measureIcons {
+  width: 4em;
+  height: auto;
+}
+
+.hidden {
+  display: none;
 }
