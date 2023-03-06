@@ -15,6 +15,7 @@ body {
   color: white;
   height: 5em;
   border-radius: 10px;
+  justify-content: space-around;
 }
 
 #searchIcon {
@@ -48,9 +49,9 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 1rem;
-  margin: 0.1em;
-  width: 50px;
-  height: 50px;
+  margin: 0.2em;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: none;
 }
@@ -58,4 +59,64 @@ body {
 .buttons:active {
   background-color: black;
   color: white;
+}
+
+#buttonGithub {
+  background-color: transparent;
+  border-style: none;
+  margin-right: 1em;
+}
+
+.headerList {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+#buttonGithub:hover svg {
+  fill: red;
+}
+
+#buttonGithub:active svg {
+  fill: #b00b0b;
+}
+/*                   Content                       */
+.weekWeather {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.dailyWeather {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border-radius: 15px;
+  margin: 0.5em;
+  width: 30em;
+  height: 15em;
+  background-color: #87ceeb;
+}
+
+.dailyWeather img {
+  width: 5em;
+  height: auto;
+}
+
+/*                   Second Content                       */
+.secondContent {
+  border: 1px solid red;
+  height: 56vh;
+}
+
+.currentWeather {
+  border: 1px solid greenyellow;
 }
