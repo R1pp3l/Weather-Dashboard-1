@@ -20,7 +20,7 @@ searchInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     const city = searchInput.value;
-    const geocodingUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+    const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
     fetch(geocodingUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -35,7 +35,7 @@ searchInput.addEventListener("keypress", (event) => {
           const dailyWeather = data.daily[i];
           const dailyWeatherElement = dailyWeatherElements[i];
           const dayName = getDayName(dailyWeather.dt);
-          const iconUrl = `http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`;
+          const iconUrl = `https://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`;
           const minTemp = dailyWeather.temp.min;
           const maxTemp = dailyWeather.temp.max;
           dailyWeatherElement.innerHTML = `<p>${dayName}</p>
@@ -75,7 +75,7 @@ searchInput.addEventListener("keypress", (event) => {
             const dailyWeather = daily[i];
             const dailyWeatherElement = dailyWeatherElements[i];
             const dayName = getDayName(dailyWeather.dt);
-            const iconUrl = `http://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`;
+            const iconUrl = `https://openweathermap.org/img/wn/${dailyWeather.weather[0].icon}.png`;
             const minTemp = dailyWeather.temp.min;
             const maxTemp = dailyWeather.temp.max;
             const tempString = `${getTemperatureString(
@@ -114,7 +114,7 @@ searchInput.addEventListener("keypress", (event) => {
         uvIndexElement.textContent = currentWeather.uvi;
         document.getElementById("currentUVIndex").classList.remove("hidden");
 
-        const iconUrl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
         currentIconElement.setAttribute("src", iconUrl);
         currentIconElement.setAttribute(
           "alt",
