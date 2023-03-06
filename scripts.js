@@ -42,6 +42,50 @@ searchInput.addEventListener("keypress", (event) => {
           <p>${Math.round(minTemp)}°C / ${Math.round(maxTemp)}°C</p>
         `;
         }
+
+        const currentIconElement = document.getElementById("currentIcon");
+        const currentDescriptionElement =
+          document.getElementById("currentDescription");
+        const currentTempElement = document.getElementById("currentTemp");
+
+        const currentDateTimeElement =
+          document.getElementById("currentDateTime");
+        const currentLocationElement =
+          document.getElementById("currentLocation");
+        const currentWeather = data.current;
+
+        const humidityElement = document.getElementById("humidity");
+        humidityElement.textContent = `${currentWeather.humidity}%`;
+        document.getElementById("currentHumidity").classList.remove("hidden");
+
+        const pressureElement = document.getElementById("pressure");
+        pressureElement.textContent = `${currentWeather.pressure} hPa`;
+        document.getElementById("currentPressure").classList.remove("hidden");
+
+        const windSpeedElement = document.getElementById("windSpeed");
+        windSpeedElement.textContent = `${currentWeather.wind_speed} m/s`;
+        document.getElementById("currentWindSpeed").classList.remove("hidden");
+
+        const uvIndexElement = document.getElementById("uvIndex");
+        uvIndexElement.textContent = currentWeather.uvi;
+        document.getElementById("currentUVIndex").classList.remove("hidden");
+
+        const iconUrl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
+        currentIconElement.setAttribute("src", iconUrl);
+        currentIconElement.setAttribute(
+          "alt",
+          currentWeather.weather[0].description
+        );
+        currentDescriptionElement.innerHTML =
+          data.current.weather[0].description;
+        currentTempElement.innerHTML = `${Math.round(currentWeather.temp)} °C`;
+        const date = new Date(currentWeather.dt * 1000);
+        const options = { weekday: "long", hour: "numeric", minute: "numeric" };
+        currentDateTimeElement.innerHTML = date.toLocaleDateString(
+          "en-US",
+          options
+        );
+        currentLocationElement.innerHTML = city;
       })
       .catch((error) => console.error(error));
   }
